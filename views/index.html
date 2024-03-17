@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Database Management</title>
+</head>
+<body>
+    <div class="sidenav">
+        <button id="create-table-form-btn" type="button">Create Table</button>
+        <div id="tableList"></div>
+    </div>
+    <div class="main">
+        <h1>Database Mangement System Project</h1>
+        <div id="table-form-div" style="display: none;">
+            <form id="table-form" action="/tableDetails/add-table" method="post">
+                <fieldset id="form-fieldset">
+                    <p> Enter new table details below: </p>
+                    <label for="table-name">Table Name : 
+                        <input type="text" id="table-name" placeholder="Students" required>
+                    </label>
+                    <br style="display: block;">
+                    <div class="formFields">
+                        <label for="column-name" >Column Name: <input class="column-name" type="text" placeholder="Student_FullName" required></label>
+                        <label for="input-datatypes"> DataType: 
+                        <select name="input-datatypes" class="input-datatypes" required>
+                            <option value="">Select an option </option>
+                            <option value="STRING"> STRING </option>
+                            <option value="INTEGER"> INTEGER </option>
+                        </select>
+                    </label>
+                    </div>
+                    
+                    <div id="form-div"> 
+                        
+                    </div>
+                    <button id="add-more-cloumns-btn" type="button"> Add Columns </button>
+                    <button id="add-table-submit-btn" type="submit"> Add Table </button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div id = "insert-data-div" style="display: none;">
+            <div id="insert-btn-div" style="display: none;"></div>
+            <div id="dynamic-form"> <form id="data-input"></form> </div>
+            
+            <div id="display-table-data"></div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
